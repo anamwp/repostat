@@ -27,6 +27,9 @@ export default function Todaycommit(props) {
         });
         const todayDate = moment().format('L');
         const todaycommiteddata = commits.filter(commit => commit.date === todayDate);
+        // console.log('todayDate', todayDate);
+        // console.log('commits', commits);
+        // console.log('todaycommiteddata', todaycommiteddata);
         setTodaycommitobj(todaycommiteddata);
     
     }, []);

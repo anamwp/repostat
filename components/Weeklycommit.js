@@ -18,6 +18,7 @@ export default function Weeklycommit(props) {
                 repo: repo,
             }
         );
+        // console.log('weeklyCommit', weeklyCommit);
         setCommits(weeklyCommit);
     
     }, []);
@@ -29,7 +30,7 @@ export default function Weeklycommit(props) {
                 {
                     commits.data
                     ? 
-                    commits.data.all[commits.data.all.length - 1]
+                    commits.data.all[0]
                     : 
                     '0'
                 }
