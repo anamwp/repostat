@@ -3,8 +3,8 @@ import { Octokit } from "@octokit/core";
 import moment from 'moment';
 
 export default function Todaycommit(props) {
-    // const octokit = new Octokit({ auth: process.env.GITKEY });
-    const octokit = new Octokit();
+    const octokit = new Octokit({ auth: process.env.GITKEY });
+    // const octokit = new Octokit();
     const [todaycommitobj, setTodaycommitobj] = useState();
 
     useEffect( async () => {
@@ -33,11 +33,11 @@ export default function Todaycommit(props) {
     }, []);
 
     return (
-        <div>
-            <h4>Today's Commit</h4>
+        <div className="group border-r-0  p-2 py-3 text-green-500 max-w-full mx-auto w-full border  rounded-sm select-none overflow-hidden space-y-1 hover:bg-white">
             <p>
-                {todaycommitobj ? todaycommitobj.length : 'fetching data'}
+                <b>{todaycommitobj ? todaycommitobj.length : 'fetching data'}</b>
             </p>
+            <h4>Today's Commit</h4>
         </div>
     )
 }

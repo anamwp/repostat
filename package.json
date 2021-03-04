@@ -10,16 +10,20 @@
   },
   "dependencies": {
     "@octokit/core": "^3.2.5",
+    "autoprefixer": "^10.2.4",
     "chart.js": "^2.9.4",
     "get-first-commit": "^0.2.0",
     "moment": "^2.29.1",
     "moment-timezone": "^0.5.33",
     "next": "10.0.7",
+    "postcss": "^8.2.7",
     "react": "17.0.1",
     "react-chartjs-2": "^2.11.1",
     "react-dom": "17.0.1",
+    "react-markdown": "^5.0.3",
     "react-moment": "^1.1.1",
     "repo-first-commit": "^1.0.0",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "tailwindcss": "^2.0.3"
   }
 }
