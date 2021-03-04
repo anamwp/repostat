@@ -5,7 +5,7 @@ import { Line } from 'react-chartjs-2';
 
 const weekCount = [];
 for(let a=1; a<=8; a++){
-    weekCount.push('week-' + a);
+    weekCount.push(a);
 };
 
 export default function Weeklycommitgraph(props) {
