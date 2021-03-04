@@ -4,7 +4,6 @@ import moment from 'moment';
 
 export default function Todaycommit(props) {
     const octokit = new Octokit({ auth: process.env.GITKEY });
-    // const octokit = new Octokit();
     const [todaycommitobj, setTodaycommitobj] = useState();
 
     useEffect( async () => {

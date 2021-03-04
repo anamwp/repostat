@@ -7,17 +7,12 @@ export default function Totalcommit(props) {
     const octokit = new Octokit({ 
         auth: process.env.GITKEY 
     });
-    // const octokit = new Octokit();
     const [commithistory, setCommithistory] = useState();
-
-    // console.log('env data', process.env.OWNER);
 
     useEffect( async () => {
         const owner = props.repo.owner, 
         repo = props.repo.name,
         branch = props.repo.branch;
-
-        // console.log(owner, repo, branch);
 
         const checkRepPermission = await octokit.request(    
             `GET /repos/${owner}/${repo}`, {
@@ -25,7 +20,6 @@ export default function Totalcommit(props) {
                 repo: repo,
             }
         );
-        // console.log('checkRepPermission', checkRepPermission.data.private);
 
         if(checkRepPermission.data.private == false){
             const repofirstcommit = await fetchFirstCommit({ owner, repo, sha:null })
@@ -48,8 +42,6 @@ export default function Totalcommit(props) {
             }
         );
         const lastcommitsha = latestCommits.data[0].sha;
-        
-        // console.log('firstcommitsha', firstcommitsha , 'lastcommitsha', lastcommitsha);
 
         const getTotalCommits = await octokit.request(
             `GET /repos/${owner}/${repo}/compare/${lastcommitsha}...${firstcommitsha}`, {
@@ -60,8 +52,6 @@ export default function Totalcommit(props) {
         setCommithistory(getTotalCommits);
     
     }, []);
-
-    // console.log('commithistory --', typeof(commithistory));
 
     return (
         <div className="group p-2 py-3 text-purple-500 border-r-0 max-w-full mx-auto w-full border  rounded-sm select-none overflow-hidden space-y-1 hover:bg-white">

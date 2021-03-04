@@ -10,7 +10,6 @@ for(let a=1; a<=8; a++){
 
 export default function Weeklycommitgraph(props) {
     const octokit = new Octokit({ auth: process.env.GITKEY });    
-    // const octokit = new Octokit();    
     const [commits, setCommits] = useState([]);
 
     const data = {
