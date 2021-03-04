@@ -23,7 +23,7 @@ export default function Weeklycommit(props) {
     }, []);
 
     return (
-        <div className="group border-r-0 p-2 py-3 text-yellow-500 max-w-full mx-auto w-full border  rounded-sm select-none overflow-hidden space-y-1 hover:bg-white">
+        <div className="group border-r-1 md:border-r-0 p-2 py-3 text-yellow-500 max-w-full mx-auto w-full border  rounded-sm select-none overflow-hidden space-y-1 hover:bg-white">
             <p>
                 <b>
                     {

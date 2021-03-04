@@ -54,7 +54,7 @@ export default function Totalcommit(props) {
     }, []);
 
     return (
-        <div className="group p-2 py-3 text-purple-500 border-r-0 max-w-full mx-auto w-full border  rounded-sm select-none overflow-hidden space-y-1 hover:bg-white">
+        <div className="group p-2 py-3 text-purple-500 border-r-1 md:border-r-0 max-w-full mx-auto w-full border  rounded-sm select-none overflow-hidden space-y-1 hover:bg-white">
             <p>
                 <b>
                 { 

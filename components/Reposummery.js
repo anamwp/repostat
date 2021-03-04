@@ -7,7 +7,7 @@ import Yesterdaycommit from './Yesterdaycommit';
 export default function Reposummery(props) {
     const repo = props.repo;
     return (
-        <div className="grid gap-0 grid-cols-4 md:grid-cols-4 sm:grid-cols-1 mt-10 rounded overflow-hidden">
+        <div className="grid gid-cols-1 sm:grid-cols-2 p-10 md:grid-cols-4 sm:gap-2 md:gap-0  mt-5 md:mt-10 rounded overflow-hidden">
             <Totalcommit repo={repo} />
             <Weeklycommit repo={repo} />
             <Todaycommit repo={repo} />

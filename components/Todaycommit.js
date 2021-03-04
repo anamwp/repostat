@@ -32,7 +32,7 @@ export default function Todaycommit(props) {
     }, []);
 
     return (
-        <div className="group border-r-0  p-2 py-3 text-green-500 max-w-full mx-auto w-full border  rounded-sm select-none overflow-hidden space-y-1 hover:bg-white">
+        <div className="group border-r-1 md:border-r-0  p-2 py-3 text-green-500 max-w-full mx-auto w-full border  rounded-sm select-none overflow-hidden space-y-1 hover:bg-white">
             <p>
                 <b>{todaycommitobj ? todaycommitobj.length : 'fetching data'}</b>
             </p>
