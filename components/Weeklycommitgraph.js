@@ -3,7 +3,7 @@ import { Octokit } from "@octokit/core";
 import { useEffect, useState } from "react";
 
 import { Line } from 'react-chartjs-2'
-console.log('GITKEY', process.env.GITKEY);
+// console.log('GITKEY', process.env.GITKEY);
 const weekCount = [];
 for(let a=1; a<=52; a++){
     weekCount.push(a);
