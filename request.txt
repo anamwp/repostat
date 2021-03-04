@@ -1,0 +1,14 @@
+
+GET /repos/wpsmartpay/wp-smartpay-pro/commits?sha=product-subscription
+
+GET /repos/${owner}/${repo}/branches/develop
+
+GET /repos/${owner}/${repo}/commits?sha=develop
+
+https://api.github.com/repos/themexpert/onepager/commits?sha=develop
+
+https://api.github.com/orgs/${props.orgname}/repos
+
+GET /repos/themexpert/onepager/commits
+
+GET /repos/${owner}/${repo}/commits?sha=${branch}

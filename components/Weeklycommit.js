@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 export default function Weeklycommit(props) {
     const [commits, setCommits] = useState([]);
-    const octokit = new Octokit({ auth: process.env.gitauth });
+    const octokit = new Octokit({ auth: process.env.GITKEY });
 
     useEffect( async () => {
 

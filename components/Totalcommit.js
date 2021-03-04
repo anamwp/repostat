@@ -3,7 +3,7 @@ import { Octokit } from "@octokit/core";
 import fetchFirstCommit from 'repo-first-commit';
 
 export default function Totalcommit(props) {
-    const octokit = new Octokit({ auth: process.env.gitauth });
+    const octokit = new Octokit({ auth: process.env.GITKEY });
     const [commithistory, setCommithistory] = useState();
 
     // console.log('env data', process.env.OWNER);

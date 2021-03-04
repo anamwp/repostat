@@ -1,5 +1,16 @@
 import Reposummery from '../components/Reposummery'
-import styles from '../styles/Home.module.css'
+import Weeklycommitgraph from '../components/Weeklycommitgraph'
+import styled from 'styled-components'
+
+const ContentWrapper = styled.div`
+  width:70%;
+  margin: 0 auto;
+  text-align:center;
+  canvas{
+    width:100%;
+    height:auto;
+  }
+`;
 
 export default function Home() {
   const repo= {
@@ -8,11 +19,14 @@ export default function Home() {
     branch : 'master'
   }
   return (
-    <div className={styles.container}>
+    <ContentWrapper>
         <h2>{repo.name.toUpperCase()}</h2>
+        <div>
+          <Weeklycommitgraph/>
+        </div>
         <div>
             <Reposummery repo = {repo}/>
         </div>
-    </div>
+    </ContentWrapper>
   )
 }
