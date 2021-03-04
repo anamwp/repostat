@@ -3,7 +3,8 @@ import { Octokit } from "@octokit/core";
 import moment from 'moment';
 
 export default function Todaycommit(props) {
-    const octokit = new Octokit({ auth: process.env.GITKEY });
+    // const octokit = new Octokit({ auth: process.env.GITKEY });
+    const octokit = new Octokit();
     const [todaycommitobj, setTodaycommitobj] = useState();
 
     useEffect( async () => {
@@ -27,9 +28,6 @@ export default function Todaycommit(props) {
         });
         const todayDate = moment().format('L');
         const todaycommiteddata = commits.filter(commit => commit.date === todayDate);
-        // console.log('todayDate', todayDate);
-        // console.log('commits', commits);
-        // console.log('todaycommiteddata', todaycommiteddata);
         setTodaycommitobj(todaycommiteddata);
     
     }, []);

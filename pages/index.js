@@ -14,8 +14,8 @@ const ContentWrapper = styled.div`
 
 export default function Home() {
   const repo= {
-    owner : 'elementor', 
-    name : 'elementor',
+    owner : 'gatsbyjs', 
+    name : 'gatsby',
     branch : 'master'
   }
   return (

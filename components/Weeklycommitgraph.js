@@ -1,20 +1,17 @@
 import React from 'react'
 import { Octokit } from "@octokit/core";
 import { useEffect, useState } from "react";
+import { Line } from 'react-chartjs-2';
 
-import { Line } from 'react-chartjs-2'
-// console.log('GITKEY', process.env.GITKEY);
 const weekCount = [];
 for(let a=1; a<=52; a++){
     weekCount.push(a);
 };
-// console.log('weekCount', weekCount);
-
 
 export default function Weeklycommitgraph() {
+    // const octokit = new Octokit({ auth: process.env.GITKEY });    
+    const octokit = new Octokit();    
     const [commits, setCommits] = useState([]);
-    const octokit = new Octokit({ auth: process.env.GITKEY });
-    
 
     const data = {
         labels: weekCount,
@@ -43,8 +40,7 @@ export default function Weeklycommitgraph() {
     useEffect( async () => {
 
         const owner = 'elementor', 
-        repo = 'elementor',
-        branch = 'master'
+        repo = 'elementor';
         
         const weeklyCommit = await octokit.request(
             `GET /repos/${owner}/${repo}/stats/participation`, {
@@ -52,25 +48,14 @@ export default function Weeklycommitgraph() {
                 repo: repo,
             }
         );
-        // console.log('weeklyCommit', weeklyCommit.data.all);
+        console.log('weeklyCommit', weeklyCommit);
         setCommits(weeklyCommit.data.all);
     
     }, []);
-    // console.log('commit', commits);
 
     return (
         <div>
             <Line data={data} options={options} />
-            {/* <h4> Weekly Commit </h4>
-            <p>
-                {
-                    commits.data
-                    ? 
-                    commits.data.all[0]
-                    : 
-                    '0'
-                }
-            </p> */}
         </div>
     )
 }
