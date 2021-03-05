@@ -16,7 +16,6 @@
     "next": "10.0.7",
     "postcss": "^8.2.7",
     "react": "17.0.1",
-    "react-chartjs-2": "^2.11.1",
     "react-dom": "17.0.1",
     "repo-first-commit": "^1.0.0",
     "tailwindcss": "^2.0.3"
