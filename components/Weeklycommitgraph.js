@@ -52,7 +52,7 @@ export default function Weeklycommitgraph(props) {
     }, []);
 
     return (
-        <div className="container max-w-screen-md mx-auto">
+        <div className="container max-w-screen-md mx-auto px-10">
             <Line data={data} options={options} />
         </div>
     )

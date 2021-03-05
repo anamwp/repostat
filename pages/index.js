@@ -15,7 +15,7 @@ export default function Home() {
             {repo.name}
         </h2>
         
-        <div className="mt-3 pt-3 items-center">
+        <div className="mt-4 pt-3 items-center">
             <Weeklycommitgraph repo = {repo}/>
             <Reposummery repo = {repo}/>
         </div>
