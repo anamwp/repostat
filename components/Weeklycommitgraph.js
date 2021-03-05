@@ -16,7 +16,7 @@ export default function Weeklycommitgraph(props) {
         labels: weekCount,
         datasets: [
             {
-            label: '',
+            label: 'Weekly Commit',
             data: commits.slice(0, 8),
             fill: false,
             backgroundColor: 'rgb(64, 196, 99)',
